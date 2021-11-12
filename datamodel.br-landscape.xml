@@ -46,13 +46,34 @@
                         </item>
                     </items>
                 </search>
-                <list>
+            </presentation>
+        </class>
+        <class id="VirtualMachine" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col1">
+                            <rank>90</rank>
+                            <items>
+                                <item id="fieldset:Server:baseinfo">
+                                    <rank>10</rank>
+                                    <items>
+                                        <item id="system_landscape" _delta="define">
+                                            <rank>33</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+                <search>
                     <items>
                         <item id="system_landscape" _delta="define">
                             <rank>33</rank>
                         </item>
                     </items>
-                </list>
+                </search>
             </presentation>
         </class>
     </classes>
