@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.7">    <!--
+    * @copyright   Copyright (C) 2021 Björn Rudner
+    * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
+    -->
+    <classes>        <!-- Add SystemLandscape Core and Probe to FunctionalCI and Devices to Monitor -->
+        <class id="FunctionalCI" _delta="must_exist">
+            <fields>
+                <field id="system_landscape" xsi:type="AttributeEnum" _delta="define">
+                    <values>
+                        <value id="dev">dev</value>
+                        <value id="qas">qas</value>
+                        <value id="prd">prd</value>
+                    </values>
+                    <sql>system_landscape</sql>
+                    <default_value>prd</default_value>
+                    <is_null_allowed>true</is_null_allowed>
+                    <display_style>list</display_style>
+                </field>
+            </fields>
+            <presentation />
+        </class>
+        <class id="Server" _delta="must_exist">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col1">
+                            <rank>120</rank>
+                            <items>
+                                <item id="fieldset:Server:baseinfo">
+                                    <rank>10</rank>
+                                    <items>
+                                        <item id="system_landscape" _delta="define">
+                                            <rank>33</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>33</rank>
+                        </item>
+                    </items>
+                </search>
+                <list>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>33</rank>
+                        </item>
+                    </items>
+                </list>
+            </presentation>
+        </class>
+    </classes>
+</itop_design>
