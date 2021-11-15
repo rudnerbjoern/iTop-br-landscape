@@ -48,6 +48,34 @@
                 </search>
             </presentation>
         </class>
+        <class id="NetworkDevice" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col1">
+                            <rank>80</rank>
+                            <items>
+                                <item id="fieldset:Server:baseinfo">
+                                    <rank>10</rank>
+                                    <items>
+                                        <item id="system_landscape" _delta="define">
+                                            <rank>33</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>33</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
         <class id="VirtualMachine" _delta="if_exists">
             <presentation>
                 <details>
@@ -74,6 +102,28 @@
                         </item>
                     </items>
                 </search>
+            </presentation>
+        </class>
+        <class id="Hypervisor" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>28</rank>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <class id="Farm" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>28</rank>
+                        </item>
+                    </items>
+                </details>
             </presentation>
         </class>
     </classes>
