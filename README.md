@@ -1,6 +1,8 @@
 # iTop-br-landscape
 
-Copyright (C) 2021 Björn Rudner
+Copyright (c) 2021-2022 Björn Rudner
+[![License](https://img.shields.io/github/license/rudnerbjoern/iTop-br-landscape)](https://github.com/rudnerbjoern/iTop-br-landscape/blob/main/LICENSE)
+
 
 ## What?
 
