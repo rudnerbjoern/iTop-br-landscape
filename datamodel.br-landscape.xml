@@ -126,5 +126,30 @@
                 </details>
             </presentation>
         </class>
+        <class id="ApplicationSolution" _delta="must_exist">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>35</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>29</rank>
+                        </item>
+                    </items>
+                </search>
+                <list>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>19</rank>
+                        </item>
+                    </items>
+                </list>
+            </presentation>
+        </class>
     </classes>
 </itop_design>
