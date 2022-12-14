@@ -46,6 +46,13 @@
                         </item>
                     </items>
                 </search>
+                <list>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>22</rank>
+                        </item>
+                    </items>
+                </list>
             </presentation>
         </class>
         <class id="NetworkDevice" _delta="if_exists">
@@ -74,6 +81,13 @@
                         </item>
                     </items>
                 </search>
+                <list>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>22</rank>
+                        </item>
+                    </items>
+                </list>
             </presentation>
         </class>
         <class id="VirtualMachine" _delta="if_exists">
@@ -102,6 +116,13 @@
                         </item>
                     </items>
                 </search>
+                <list>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>22</rank>
+                        </item>
+                    </items>
+                </list>
             </presentation>
         </class>
         <class id="Hypervisor" _delta="if_exists">
@@ -113,6 +134,13 @@
                         </item>
                     </items>
                 </details>
+                <list>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>35</rank>
+                        </item>
+                    </items>
+                </list>
             </presentation>
         </class>
         <class id="Farm" _delta="if_exists">
@@ -124,6 +152,13 @@
                         </item>
                     </items>
                 </details>
+                <list>
+                    <items>
+                        <item id="system_landscape" _delta="define">
+                            <rank>22</rank>
+                        </item>
+                    </items>
+                </list>
             </presentation>
         </class>
         <class id="ApplicationSolution" _delta="must_exist">
