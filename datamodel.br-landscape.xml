@@ -187,30 +187,4 @@
             </presentation>
         </class>
     </classes>
-    <dictionaries>
-        <dictionary id="EN US">
-            <entries>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape" _delta="define">System landscape</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape+" _delta="define">System landscape the system is located in</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:dev" _delta="define">development</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:dev+" _delta="define">Development system</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:qas" _delta="define">quality assurance</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:qas+" _delta="define">Quality assurance system</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:prd" _delta="define">production</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:prd+" _delta="define">Production system</entry>
-            </entries>
-        </dictionary>
-        <dictionary id="DE DE">
-            <entries>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape" _delta="define">Systemlandschaft</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape+" _delta="define">Systemlandschaft, in der sich das System befindet</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:dev" _delta="define">Entwicklung</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:dev+" _delta="define">Entwicklungssystem</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:qas" _delta="define">Qualitätssicherung</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:qas+" _delta="define">Qualitätssicherungssystem</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:prd" _delta="define">Produktion</entry>
-                <entry id="Class:FunctionalCI/Attribute:system_landscape/Value:prd+" _delta="define">Produktionssystem</entry>
-            </entries>
-        </dictionary>
-    </dictionaries>
 </itop_design>
