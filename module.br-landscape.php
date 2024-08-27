@@ -62,7 +62,7 @@ if (!class_exists('SystemLandscapeInstaller')) {
         {
             // Create audit rules introduced in Version 1.0.0
             if (version_compare($sPreviousVersion, '1.0.0', '<')) {
-                SetupPage::log_info("|- Installing landscape from '$sPreviousVersion' to '$sCurrentVersion'. The extension comes with audit rules so corresponding objects will created into the DB...");
+                SetupLog::Info("|- Installing landscape from '$sPreviousVersion' to '$sCurrentVersion'. The extension comes with audit rules so corresponding objects will created into the DB...");
 
                 if (MetaModel::IsValidClass('AuditRule')) {
                     // First, create audit category for Server mismatch
@@ -77,12 +77,12 @@ if (!class_exists('SystemLandscapeInstaller')) {
                                 'definition_set' => 'SELECT FunctionalCI',
                             ));
                             $oAuditCategory->DBWrite();
-                            SetupPage::log_info('|  |- AuditCategory "System Landscape Mismatch" created.');
+                            SetupLog::Info('|  |- AuditCategory "System Landscape Mismatch" created.');
                         } catch (Exception $oException) {
-                            SetupPage::log_info('|  |- Could not create AuditCategory. (Error: ' . $oException->getMessage() . ')');
+                            SetupLog::Info('|  |- Could not create AuditCategory. (Error: ' . $oException->getMessage() . ')');
                         }
                     } else {
-                        SetupPage::log_info('|  |- AuditCategory "System Landscape Mismatch" already existing! Weird as it is supposed to be created by this extension, but meh, will use it anyway!');
+                        SetupLog::Info('|  |- AuditCategory "System Landscape Mismatch" already existing! Weird as it is supposed to be created by this extension, but meh, will use it anyway!');
                     }
 
                     // Then, create audit rules
@@ -120,9 +120,9 @@ if (!class_exists('SystemLandscapeInstaller')) {
                             $oAuditRule = MetaModel::NewObject('AuditRule', $aAuditRule);
                             $oAuditRule->Set('category_id', $oAuditCategory->GetKey());
                             $oAuditRule->DBWrite();
-                            SetupPage::log_info('|  |- AuditRule "' . $aAuditRule['name'] . '" created.');
+                            SetupLog::Info('|  |- AuditRule "' . $aAuditRule['name'] . '" created.');
                         } catch (Exception $oException) {
-                            SetupPage::log_info('|  |- Could not create AuditRule "' . $aAuditRule['name'] . '". (Error: ' . $oException->getMessage() . ')');
+                            SetupLog::Info('|  |- Could not create AuditRule "' . $aAuditRule['name'] . '". (Error: ' . $oException->getMessage() . ')');
                         }
                     }
                 }
