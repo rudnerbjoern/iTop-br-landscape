@@ -9,4 +9,4 @@ iTop extension to add system landscape to functional CIs
 
 ## iTop Compatibility
 
-The extension was tested on iTop 2.7.11
+The extension was tested on iTop 2.7.11 and 3.1.1
