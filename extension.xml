@@ -16,7 +16,7 @@
         <![CDATA[Adds the ability to specify system landscape for FunctionaCIs.]]>
     </description>
     <version>
-        <![CDATA[1.1.1]]>
+        <![CDATA[3.1.2]]>
     </version>
     <release_date>
         <![CDATA[2024-09-06]]>
@@ -25,7 +25,7 @@
         <![CDATA[]]>
     </version_description>
     <itop_version_min>
-        <![CDATA[2.7.0]]>
+        <![CDATA[3.1.0]]>
     </itop_version_min>
     <status>stable</status>
     <mandatory>false</mandatory>
