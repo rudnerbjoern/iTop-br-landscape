@@ -5,6 +5,11 @@
     -->
     <classes>        <!-- Add SystemLandscape Core and Probe to FunctionalCI and Devices to Monitor -->
         <class id="FunctionalCI" _delta="must_exist">
+            <properties>
+                <fields_semantic>
+                    <state_attribute _delta="define">system_landscape</state_attribute>
+                </fields_semantic>
+            </properties>
             <fields>
                 <field id="system_landscape" xsi:type="AttributeEnum" _delta="define">
                     <values>
