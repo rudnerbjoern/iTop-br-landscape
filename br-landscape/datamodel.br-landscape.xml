@@ -20,7 +20,7 @@
             </fields>
             <presentation />
         </class>
-        <class id="Server" _delta="must_exist">
+        <class id="Server" _delta="if_exists">
             <presentation>
                 <details>
                     <items>
@@ -161,7 +161,7 @@
                 </list>
             </presentation>
         </class>
-        <class id="ApplicationSolution" _delta="must_exist">
+        <class id="ApplicationSolution" _delta="if_exists">
             <presentation>
                 <details>
                     <items>
