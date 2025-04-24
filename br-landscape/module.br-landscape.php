@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @copyright   Copyright (C) 2021-2024 Björn Rudner
+ * @copyright   Copyright (C) 2021-2025 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2024-09-06
+ * @version     2025-04-24
  *
  * iTop module definition file
  */
@@ -123,6 +123,57 @@ if (!class_exists('SystemLandscapeInstaller')) {
                             SetupLog::Info('|  |- AuditRule "' . $aAuditRule['name'] . '" created.');
                         } catch (Exception $oException) {
                             SetupLog::Info('|  |- Could not create AuditRule "' . $aAuditRule['name'] . '". (Error: ' . $oException->getMessage() . ')');
+                        }
+                    }
+                }
+            }
+
+            // Introduce AuditDomain in Version 3.2.0
+            if (version_compare($sPreviousVersion, '3.2.0', '<')) {
+                SetupLog::Info("|- Installing System Landscape from '$sPreviousVersion' to '$sCurrentVersion'. Updating AuditDomain and lnkAuditCategoryToAuditDomain ...");
+
+                $iAuditDomainId = 0;
+                $iAuditCategoryId = 0;
+
+                if (MetaModel::IsValidClass('AuditDomain')) {
+                    // First, create audit category for Server mismatch
+                    $oSearch = DBObjectSearch::FromOQL('SELECT AuditDomain WHERE name = "System Landscape"');
+                    $oSet = new DBObjectSet($oSearch);
+                    $oAuditDomain = $oSet->Fetch();
+
+                    if ($oAuditDomain === null) {
+                        try {
+                            $oAuditDomain = MetaModel::NewObject('AuditDomain', array(
+                                'name' => 'System Landscape',
+                                'description' => 'Audit System Landscapes defined in the CMDB',
+                            ));
+                            $oAuditDomain->DBWrite();
+                            SetupLog::Info('|  |- AuditDomain "System Landscape" created.');
+                        } catch (Exception $oException) {
+                            SetupLog::Info('|  |- Could not create AuditDomain. (Error: ' . $oException->getMessage() . ')');
+                        }
+                    } else {
+                        SetupLog::Info('|  |- AuditDomain "System Landscape" already existing! We will use it!');
+                    }
+
+                    // Link AuditDomain with AuditCategory: System Landscape Mismatch
+                    $oSearch = DBObjectSearch::FromOQL('SELECT AuditCategory WHERE name = "System Landscape Mismatch"');
+                    $oSet = new DBObjectSet($oSearch);
+                    $oAuditCategory = $oSet->Fetch();
+
+                    $iAuditDomainId = ($oAuditDomain !== null) ? $oAuditDomain->GetKey() : 0;
+                    $iAuditCategoryId = ($oAuditCategory !== null) ? $oAuditCategory->GetKey() : 0;
+
+                    if ($iAuditDomainId > 0 && $iAuditCategoryId > 0) {
+                        try {
+                            $oAuditLink = MetaModel::NewObject('lnkAuditCategoryToAuditDomain', array(
+                                'domain_id' => $iAuditDomainId,
+                                'category_id' => $iAuditCategoryId,
+                            ));
+                            $oAuditLink->DBWrite();
+                            SetupLog::Info('|  |- AuditLink created.');
+                        } catch (Exception $oException) {
+                            SetupLog::Info('|  |- Could not create AuditLink. (Error: ' . $oException->getMessage() . ')');
                         }
                     }
                 }
