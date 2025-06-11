@@ -8,6 +8,7 @@
  * Localized data
  */
 
+ /** @disregard P1009 Undefined type Dict */
 Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:FunctionalCI/Attribute:system_landscape' => 'Systemlandschaft',
     'Class:FunctionalCI/Attribute:system_landscape+' => 'Systemlandschaft, in der sich das System befindet',
