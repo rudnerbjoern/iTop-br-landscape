@@ -1,17 +1,22 @@
 {
     "cSpell.words": [
+        "Combodo",
+        "Rudner",
         "applicationsolution",
         "attcode",
         "autoincrement",
         "baseinfo",
         "bizmodel",
         "cmdb",
+        "datacenter",
         "extkey",
         "fieldset",
         "finalclass",
         "functionalci",
         "functionalcis",
+        "itop",
         "mgmt",
+        "moreinfo",
         "otherinfo"
     ],
     "editor.formatOnSave": true,
